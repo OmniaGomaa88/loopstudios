@@ -1,0 +1,28 @@
+// mixin
+// display flex mixin
+@mixin flex($Direction,$justify,$align){
+    display:flex;
+    flex-direction:$Direction ;
+    justify-content: $justify;
+    align-items: $align;
+    }
+    // Absolute left mixin
+    @mixin abLift($top,$left){
+    position: absolute;
+    top:$top;
+    left: $left;
+    }
+    //  font style mixin
+    @mixin fontStyle($size,$color,$weight,$family){
+        font-size: $size;
+        color: $color;
+      font-weight: $weight;
+      font-family: $family;
+    }
+    // transition mixin
+    @mixin transition ($property,$delay,$duration,$timingFunction) {
+         transition: $property ;
+         transition-delay: $delay;
+         transition-duration: $duration;
+         transition-timing-function: $timingFunction;
+    }
