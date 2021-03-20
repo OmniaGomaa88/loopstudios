@@ -1,0 +1,54 @@
+@use  "../helper/mixin.scss";
+// presentation section
+#presentation{
+    @include flex(column,center,center);
+  margin-top: 5%;
+}
+img{
+  
+  width: 85%;
+  margin-right: $mainMargin;
+  padding:0 3% 0 3%;
+  @include transition(all,0s,1s,ease-out);
+  &:hover{
+    opacity: 0.7;
+  }
+}
+#text{ 
+  h2{
+      @include fontStyle(50px,$tilesColor ,300 ,$TitelsFontFamily );
+  width: 100%;
+  padding-left: 8%;
+  }
+  p{
+      @include fontStyle(20px,$textColor ,400 ,$textFontFamily );
+      width: 100%;
+      text-align: center;
+  padding-left: 2%;
+  padding-right: 2%;
+  }
+
+}
+// end of presentation section mobiel
+ // ................................
+//  presentation section desktop
+@media (min-width: 600px){
+ #presentation{
+    position: relative;
+    height: 80vh;
+    width: 100%;
+    img{
+        height: 60vh;
+        width: 50%;
+        @include abLift(10%,10% );
+    }
+    #text{
+        background-color: $mainColor;
+        width: 40%;
+        height: 40vh;
+        @include abLift(40%,52% );
+       text-align: center;
+    }
+}
+}
+// end of presntation

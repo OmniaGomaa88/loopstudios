@@ -1,0 +1,102 @@
+@use '../helper/mixin.scss';
+// footer
+footer{
+    background-color:$tilesColor ;
+    @include flex(column,center,center);
+    height: 70vh;
+   
+    #contact{
+        @include flex(row,center,center);
+    
+    }
+    .attribution{
+        p{
+            color: $textColor;
+        }
+    }
+    h3{
+        color: $mainColor;
+    }
+  
+   
+    .icon{
+        width:5vw;
+        height: 5vh;
+        padding-left: 2%;
+        cursor: pointer;
+    transition: ease-out 0.4s;
+
+   
+    }
+    .icon:hover{
+        opacity: 0.4;
+        -webkit-transform: rotate(15deg) scale(1.4);
+        transform: rotate(15deg) scale(1.4);
+     }
+
+
+    #navFooter{
+        ul{
+            @include flex(column,center,center);
+            li{
+                margin-bottom: 30%;
+                list-style: none;
+                a{
+    
+                    text-decoration: none;
+                    color: $mainColor;
+                    padding-top: 20%;
+                  
+                    // border: solid 2px white;
+                }
+            }
+        }
+     
+    }
+    #attribution{
+        color:$mainColor ;
+    }
+}
+
+
+// end of footer mobie
+// ....................................
+// footer desktop
+@media (min-width: 600px){
+
+
+       
+    // .......................................
+ 
+// start of footer
+footer{
+    height: 30vh;
+    @include flex(row,space-between ,center );
+    padding-right: 5%;
+    padding-left: 5%;
+    position: relative;
+    #contact{
+        @include abLift(15%,80% );
+      
+
+    }
+    .icon{
+        width:3vw;
+        height: 3vh;
+    }
+   
+    #navFooter{
+        h3{
+            padding-left: 20%;
+            font-size: 30px;
+        }
+        ul{
+            @include flex(row,space-between ,center );
+        
+            li{
+                margin-left: 5%;
+            }
+        }
+    }
+}
+}

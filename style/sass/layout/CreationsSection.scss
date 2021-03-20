@@ -1,0 +1,168 @@
+// our cearation section
+@use "../helper/mixin.scss";
+// 
+#cearation{
+    // title of creation section
+    #title{
+        h2{
+            @include fontStyle(40px,$tilesColor ,400 ,$TitelsFontFamily );
+            text-transform: uppercase;
+            padding-left: 8%;
+        }
+        // button of creation section virson mobile
+        button{
+            width: 40vw;
+            height: 5vh;
+            border: 2px solid $tilesColor;
+            background-color: $mainColor;
+            font-size:20px ;
+            display: none;
+            text-transform: uppercase;
+        }
+    }
+
+}
+// class to styiling the background img for each cart
+.backgroundImg{
+    background-repeat: no-repeat;
+    background-size:cover;
+    margin-bottom: 5%;
+    color:$mainColor ;
+    height: 20vh;
+    @include flex(row,flex-start,center );
+  @include transition(transform,0s,1s,ease-out);
+
+border: 2px inset white;
+  &:hover{
+      opacity: 0.8;
+    transform:scaley(1.1);
+}
+}
+figure{
+p{
+
+    @include fontStyle(20px,$mainColor ,400 ,$textFontFamily );
+    text-transform: uppercase;
+padding-left: 4%;
+width: 35%;
+word-wrap: break-word;
+
+}
+#deep{
+    background-image: url(../images/mobile/image-deep-earth.jpg);
+}
+#night{
+    background-image: url(../images/mobile/image-night-arcade.jpg);
+}
+#soccer{
+    background-image: url(../images/mobile/image-soccer-team.jpg);
+}
+#grid{
+    background-image: url(../images/mobile/image-grid.jpg);
+}
+#from{
+    background-image: url(../images/mobile/image-from-above.jpg);
+}
+#pocket{
+    background-image: url(../images/mobile/image-pocket-borealis.jpg);
+}
+#curiosity{
+    background-image: url(../images/mobile/image-curiosity.jpg);
+}
+#fisheye{
+    background-image: url(../images/mobile/image-fisheye.jpg);
+}
+
+button{
+    width: 40vw;
+            height: 5vh;
+            border: 2px solid $tilesColor;
+            background-color: $mainColor;
+            font-size:20px ;
+          margin-left: 25%;
+          text-transform: uppercase;
+          &:hover{
+            background-color: $tilesColor;
+            color: $mainColor;
+        }
+}
+}
+// end of our cearation section
+// ................................
+@media (min-width: 600px){
+// our cearation section desktop
+   // section cearation
+   #cearation{
+    margin-top: 5%;
+  
+   #title{
+       @include flex(row,space-evenly , flex-end );
+    margin-bottom: 5%;
+ 
+    button{
+        display: block;
+        height: 5vh;
+        width: 10vw;
+    }
+    button:hover{
+        background-color: $tilesColor;
+        color: $mainColor
+    }
+   }
+//    start of images
+    figure{
+        @include flex(row,flex-start ,center);
+        flex-wrap: wrap;
+        width: 100%;
+       
+        p{
+           @include fontStyle(25px,$mainColor ,400 ,$textFontFamily );
+            word-wrap: break-word;
+            text-transform: uppercase;
+          width: 50%;
+        }
+        .backgroundImg{
+            background-repeat: no-repeat;
+            background-size:100%;
+           width: 20vw;
+            color:$mainColor ;
+            height: 50vh;
+            margin-left: 2%;
+            @include flex(row,flex-start ,flex-end );
+        margin-bottom: 3%;
+        
+    }
+       
+        #deep{
+            background-image: url(../images/desktop/image-deep-earth.jpg);
+        }
+        #night{
+            background-image: url(../images/desktop/image-night-arcade.jpg);
+        }
+        #soccer{
+            background-image: url(../images/desktop/image-soccer-team.jpg);
+        }
+        #grid{
+            background-image: url(../images/desktop/image-grid.jpg);
+        }
+        #from{
+            background-image: url(../images/desktop/image-from-above.jpg);
+        }
+        #pocket{
+            background-image: url(../images/desktop/image-pocket-borealis.jpg);
+        }
+        #curiosity{
+            background-image: url(../images/desktop/image-curiosity.jpg);
+        }
+        #fisheye{
+            background-image: url(../images/desktop/image-fisheye.jpg);
+        }
+      button{
+          display: none
+      }
+    }
+    // end of imags 
+    // end of ceration
+    // ..........................
+}
+}

@@ -1,0 +1,163 @@
+body{
+    margin: 0%;
+    padding: 0%;
+    position: relative;
+   
+}
+// header mobiel
+// ...
+// class pour menuBar
+.slidein{
+    background-color: black;
+     height: 100%;
+}
+// ..
+header{
+    background-image:url(../images/mobile/image-hero.jpg);
+    background-repeat: no-repeat;
+    background-size:100%;
+    width: 100%;
+    color:$mainColor ;
+    height: 100vh;
+    font-size: large; 
+    // hiding nabar decktop
+    #navBar{
+        display: none;
+
+    }
+     #menuMobiel{
+         @include flex(row,space-between ,center );
+        position: relative;
+      transition: all 1s;
+h3{
+    padding-left: 5%;
+    padding-top: 5%;
+}
+        
+        #Menuburger{
+            @include abLift(40%,70%);
+         width: 15%;
+         height: 20;
+        }
+        #close{
+            @include abLift(5%,80% );
+            width: 5%;
+            height: 5%;
+            display: none;
+        }
+        ul{
+          margin-top: 20%;
+            display: none;
+        }
+        a{
+            text-decoration: none;
+            @include fontStyle(20px,$mainColor ,300 ,$textFontFamily);
+            text-transform: uppercase;
+          }
+        
+           
+        }
+        li{
+            list-style: none;
+            margin-right: 5%;
+           margin-bottom: 5%;
+        }
+        
+    }
+
+    h1{
+        
+    border: 2px solid  $mainColor;
+    width: 80%;
+    margin-top: 20%;
+    @include fontStyle(50px,$mainColor ,300 ,$titleFontWeight );
+    margin-left: 10%;
+     padding-left: 5%;
+    }
+
+// end of header mobile
+// header descktop
+@media (min-width: 600px){
+    header{
+      padding-top: 5%;
+      background-image:url(../images/desktop/image-hero.jpg);
+      background-repeat: no-repeat;
+      background-size:100%;
+      width: 100%;
+      color:$mainColor ;
+      height: 80vh;
+      font-size: large;
+      // hidint menu mobile
+      #menuMobiel{
+          display: none;
+      }
+      #Menuburger{
+          display: none;
+      }
+      #close{
+          display: none;
+      }
+      #navBar{
+            @include flex(row,space-evenly ,flex-end );
+  
+              .nav-link{
+                  @include fontStyle(18px,$mainColor ,300 ,$textFontFamily );
+                  text-transform: uppercase;
+                  text-decoration: none;
+                  padding: 20px 0px;
+                  margin: 0px 20px;
+                  display: inline-block;
+                  position: relative;
+      
+              }
+              .nav-link::before {
+                  transition: 300ms;
+                  height: 2px;
+                  content: "";
+                  position: absolute;
+                  background-color: #f6f7f8;
+                }
+                .nav-link-ltr::before {
+                  width: 0%;
+                  bottom: 10px;
+                }
+                .nav-link-ltr:hover::before {
+                  width: 100%;
+                }
+              h3{
+                  @include fontStyle(40px,$mainColor ,400 ,$TitelsFontFamily );
+               padding-right: 20%;
+              
+              }
+            ul{
+              @include flex(row,space-between ,center )  ;
+              a{
+                  text-decoration: none;
+                  color: $mainColor;
+                
+              }
+              li{
+                  list-style: none;
+                  margin-right: 5%;
+                 
+              }
+              
+          
+      }
+      
+  }
+  // end of nav desctop
+  
+      h1{
+          @include fontStyle(55px,$mainColor ,400 ,$textFontFamily );
+     border: 2px solid  $mainColor;
+     width: 28vw;
+     height: 30vh;
+     margin: $mainMargin;
+     text-transform: uppercase;
+     margin-right: $mainMargin;
+     padding-left: 3%;
+      }
+  }
+}
+      // end of header deskTop
