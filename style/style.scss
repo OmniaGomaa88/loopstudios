@@ -1,0 +1,15 @@
+//   veriables
+@import 'sass/helper/veriables';
+// mixin
+@import 'sass/helper/mixin.scss';
+// import the header mobile and desktop
+@import 'sass/layout/header';
+// presentation section
+@import 'sass/layout/presSection.scss';
+// ...........
+// our creation section
+@import 'sass/layout/CreationsSection.scss';
+// ............
+// footer
+@import 'sass/layout/footer.scss'
+
